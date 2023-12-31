@@ -15,7 +15,7 @@ const getUsers = catchAsync(async (req, res) => {
   // const result = await userService.queryUsers(filter, options);
   // res.send({ ...result, test: true });
 
-  res.status(httpStatus.NO_CONTENT).send('it is working now...');
+  res.status(httpStatus.NO_CONTENT).send({ name: 'Tumen' });
 });
 
 const getUser = catchAsync(async (req, res) => {
