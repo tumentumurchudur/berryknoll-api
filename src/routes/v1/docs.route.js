@@ -18,4 +18,9 @@ router.get(
   })
 );
 
+router.get('/docs.json', (req, res) => {
+  res.setHeader('Content-Type', 'application.json');
+  res.send(specs);
+});
+
 module.exports = router;
