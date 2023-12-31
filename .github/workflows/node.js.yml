@@ -26,3 +26,4 @@ jobs:
     - run: |
         touch .env
         echo "${{ secrets.QA_ENV_FILE }}" > .env
+    - run: pm2 restart ecosystem.config.json
