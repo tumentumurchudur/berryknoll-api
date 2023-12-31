@@ -34,10 +34,15 @@ const deleteUser = catchAsync(async (req, res) => {
   res.status(httpStatus.NO_CONTENT).send();
 });
 
+const testUser = (req, res) => {
+  res.status(httpStatus.NO_CONTENT).send('it is working now...');
+};
+
 module.exports = {
   createUser,
   getUsers,
   getUser,
   updateUser,
   deleteUser,
+  testUser,
 };
