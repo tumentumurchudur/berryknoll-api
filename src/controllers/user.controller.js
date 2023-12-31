@@ -15,7 +15,7 @@ const getUsers = catchAsync(async (req, res) => {
   // const result = await userService.queryUsers(filter, options);
   // res.send({ ...result, test: true });
 
-  res.send({ name: 'Tumen' });
+  res.send({ name: 'Tumen', age: 100, gender: 'male' });
 });
 
 const getUser = catchAsync(async (req, res) => {
