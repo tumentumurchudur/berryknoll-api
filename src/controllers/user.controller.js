@@ -10,10 +10,12 @@ const createUser = catchAsync(async (req, res) => {
 });
 
 const getUsers = catchAsync(async (req, res) => {
-  const filter = pick(req.query, ['name', 'role']);
-  const options = pick(req.query, ['sortBy', 'limit', 'page']);
-  const result = await userService.queryUsers(filter, options);
-  res.send({ ...result, test: true });
+  // const filter = pick(req.query, ['name', 'role']);
+  // const options = pick(req.query, ['sortBy', 'limit', 'page']);
+  // const result = await userService.queryUsers(filter, options);
+  // res.send({ ...result, test: true });
+
+  res.status(httpStatus.NO_CONTENT).send('it is working now...');
 });
 
 const getUser = catchAsync(async (req, res) => {
