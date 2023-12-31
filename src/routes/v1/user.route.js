@@ -6,14 +6,12 @@ const userController = require('../../controllers/user.controller');
 
 const router = express.Router();
 
-router.route('/test').get(userController.testUser);
+router.get('/test', userController.testUser);
 
 router
   .route('/')
   .post(auth('manageUsers'), validate(userValidation.createUser), userController.createUser)
   .get(userController.getUsers);
-
-router.route('/test').get(userController.testUser);
 
 // .get(auth('getUsers'), validate(userValidation.getUsers), userController.getUsers);
 
